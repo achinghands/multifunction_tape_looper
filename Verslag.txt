@@ -1,29 +1,27 @@
 Week 1:
 
-Verslag Week 1
+Ons plan is om een compacte tape looper te bouwen, die vanuit een microcontroller te besturen is. 
+Hieronder hebben wij een overzicht van de functionaliteiten die wij zou willen implementeren:
 
 Moet:
-input - amp - recording head circuit,
-motor aansturen met teensy ( eerst maar eens één richting),
-bias circuit maken ---> een aantal prototypes breadboarden, kijken of digitaal/schmitt trigger/ oscilator bouwen chiller is,
+Een functioneel circuit met een preamp en een recording head;
+Een DC-motor die aangestuurd wordt met een microcontroller. In eerste instantie gebruiken wij hiervoor een Teensy, later eventueel iets compacters en goedkopers; 
+Een eraser/bias circuit maken. Hiervoor willen wij een aantal prototypes breadboarden, om te zien of een digitaal biassignaal, een schmitt trigger chip, of zelf een oscilator bouwen een beter resultaat geeft;
 
-Zou moeten:
-aparte play head toevoegen,
-aparte eraser head toevoegen ---> toggelen overdub/destructive recording,
-twee richtingen met 2 pinch rollers,
+Zou moeten: 
+Een aparte play head toevoegen;
+Kunnen toggelen van overdub/destructive recording, dwz het kunnen aansturen van de eraser head met een microcontroller;
+Tape in twee richtingen kunnen afspelen met 2 pinch rollers, idealiter met één pot bestuurd van bijvoorbeeld 2x - -2x.
 
-Kan:
-ruisonderdrukking
-richting aan te sturen met pot,
-ADC om gelijk op SD-kaart te kunnen samplen,
-eraserhead die maar deels eraset voor maximale found footage sfeer
+Zou kunnen:
+Circuit kritisch bekijken voor betere ruisonderdrukking;
+Het toevoegen van een ADC om gelijk geluiden naar een SD-kaart te kunnen opnemen;
 
 Toekomstmuziek:
-Extra portability / kleiner grootte
+Kritsch kijken naar een effectiever circuit en naar component keuze om een extra portable en compact product te kunnen leveren.
 
 
-
-Bronnen:
+Voor het concretiseren van dit concept zijn onze bronnen geweest:
 https://www.instructables.com/member/Ramatronics_Laboratory/
 (Stereo bias osc, Motor control / speed circuit, pre-amp, recorder + player, zelfs een totaalplaatje)
 
@@ -35,4 +33,3 @@ https://www.youtube.com/watch?v=mDLw054vONI
 
 https://www.youtube.com/watch?v=OMjx6y3mABY 
 (simpeler tape playback circuit)
-links on Canvas, presentation project-idea plus MoSCoW and research
