@@ -1,0 +1,38 @@
+Week 1:
+
+Verslag Week 1
+
+Moet:
+input - amp - recording head circuit,
+motor aansturen met teensy ( eerst maar eens één richting),
+bias circuit maken ---> een aantal prototypes breadboarden, kijken of digitaal/schmitt trigger/ oscilator bouwen chiller is,
+
+Zou moeten:
+aparte play head toevoegen,
+aparte eraser head toevoegen ---> toggelen overdub/destructive recording,
+twee richtingen met 2 pinch rollers,
+
+Kan:
+ruisonderdrukking
+richting aan te sturen met pot,
+ADC om gelijk op SD-kaart te kunnen samplen,
+eraserhead die maar deels eraset voor maximale found footage sfeer
+
+Toekomstmuziek:
+Extra portability / kleiner grootte
+
+
+
+Bronnen:
+https://www.instructables.com/member/Ramatronics_Laboratory/
+(Stereo bias osc, Motor control / speed circuit, pre-amp, recorder + player, zelfs een totaalplaatje)
+
+https://www.youtube.com/@igorbrichkov3632 
+(Tape recorder circuit, andere bias osc, mechanism met DC motors en PWM chill voor latere instantie, tape heads en pre-amp, play/record circuit, tape heads, power supply)
+
+https://www.youtube.com/watch?v=mDLw054vONI 
+(Tape mechanisme aansturen met Arduino-based microcontroller)
+
+https://www.youtube.com/watch?v=OMjx6y3mABY 
+(simpeler tape playback circuit)
+links on Canvas, presentation project-idea plus MoSCoW and research
