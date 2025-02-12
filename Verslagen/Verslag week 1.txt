@@ -1,6 +1,9 @@
 Week 1:
 
-Ons plan is om een compacte tape looper te bouwen, die vanuit een microcontroller te besturen is. 
+Ons plan is om een compacte tape looper te bouwen, met als idee om deze uiteindelijk vanuit een microcontroller te kunnen besturen.
+Hierbij gaan wij modulair werken
+
+
 Hieronder hebben wij een overzicht van de functionaliteiten die wij zou willen implementeren:
 
 Moet:
