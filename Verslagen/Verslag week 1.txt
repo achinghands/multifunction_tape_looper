@@ -28,8 +28,14 @@ https://www.instructables.com/member/Ramatronics_Laboratory/
 https://www.youtube.com/@igorbrichkov3632 
 (Tape recorder circuit, andere bias osc, mechanism met DC motors en PWM chill voor latere instantie, tape heads en pre-amp, play/record circuit, tape heads, power supply)
 
+https://www.youtube.com/watch?v=OMjx6y3mABY 
+(simpeler tape playback circuit)
+
+https://github.com/khoih-prog/Teensy_PWM?tab=readme-ov-file#why-do-we-need-this-Teensy_PWM-library
+(meer uitgebreide PWM voor aansturen DC-motor)
+
 https://www.youtube.com/watch?v=mDLw054vONI 
 (Tape mechanisme aansturen met Arduino-based microcontroller)
 
-https://www.youtube.com/watch?v=OMjx6y3mABY 
-(simpeler tape playback circuit)
+https://helpful.knobs-dials.com/index.php/Cassette_tape_speed_control
+(workaround om de speciale mechaniek cassette tape motor, die zelf evt. fluctueren van voltage compenseert met mechaniek, toch lineair te kunnen aansturen)
