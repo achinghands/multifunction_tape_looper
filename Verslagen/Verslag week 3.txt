@@ -9,3 +9,7 @@ Het was ons echter niet gelukt om de Arduino IDE de library te doen herkennen. N
 
 Daarnaast is de stepper library van Arduino weliswaar minder uitgebreid, maar wordt deze wel al heel lang door veel mensen gebruikt. De support online is zeer uitgebreid, waarmee alle functionaliteiten van TeensyStep makkelijk na te bootsen zijn.
 
+Deze code heeft dezelfde functies als de code van de DC motor, dat wil zeggen motor aan/uit en halve snelheid. 
+Ook is de code schaalbaar voor meerdere motoren.
+
+Voor de hardware kant..........
