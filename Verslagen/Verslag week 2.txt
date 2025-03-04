@@ -7,3 +7,11 @@ Daarom kiezen wij ervoor om de circuits voor beide motoren volledig uit te werke
 
 De code voor de DC motor was simpel. Deze wordt aangestuurd met pulse width modulation. 
 Wij hebben hiervoor de Teensy_PWM library gebruikt, aangezien die zeer uitgebreid is en meer functies al ingebouwd heeft om preciezer PWM uit te kunnen sturen.
+
+Voor het testen wilden wij op zijn minst alvast de functies ingebouwd hebben om:
+- de motor aan en uit te kunnen zetten.
+- de motor op halve snelheid te kunnen laten draaien, zodat wij dit later kunnen ombuigen naar een potmeter die de snelheid aanpast. 
+
+De code is zo geschreven dat deze makkelijk schaalbaar is, dat wil zeggen zonder veel al te veel moeite uitgebreid kan worden naar meerdere, afzonderlijk aan te sturen motoren.
+
+Voor het besturen van de hardware............
