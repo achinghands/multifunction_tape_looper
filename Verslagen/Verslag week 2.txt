@@ -14,4 +14,8 @@ Voor het testen wilden wij op zijn minst alvast de functies ingebouwd hebben om:
 
 De code is zo geschreven dat deze makkelijk schaalbaar is, dat wil zeggen zonder veel al te veel moeite uitgebreid kan worden naar meerdere, afzonderlijk aan te sturen motoren.
 
-Voor het besturen van de hardware............
+Voor het aansturen van de hardware zijn wij gaan samenzitten om de krachten te bundelen. 
+Wij gebruiken een L298N driver een gebruikelijke keuze. Daarmee is er veel documentatie beschikbaar en was het koppelen goed te doen. 
+Wij hebben nog een paar kleine aanpassingen gemaakt aan de code zodat deze beter aansluit bij onze doelen, waarbij wij ook gelijk de potmeter hebben aangesloten en code hebben geschreven om de motor variabel heen en weer te kunnen draaien.
+
+Deze code willen wij in de toekomst nog testen met een betere DC-motor om eerlijk te kunnen vergelijken met een Stepper motor. 

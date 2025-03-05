@@ -12,4 +12,7 @@ Daarnaast is de stepper library van Arduino weliswaar minder uitgebreid, maar wo
 Deze code heeft dezelfde functies als de code van de DC motor, dat wil zeggen motor aan/uit en halve snelheid. 
 Ook is de code schaalbaar voor meerdere motoren.
 
-Voor de hardware kant..........
+Voor de hardware kant gebruiken wij een L298N met een NEMA17. 
+
+
+De volgende stap wordt om een bias oscillator circuit te maken, danwel met teensy audio, danwel 'from scratch', dan wel door deze te slopen uit een bestaand mechanisme.
