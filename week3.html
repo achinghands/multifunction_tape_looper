@@ -42,12 +42,19 @@
         Ook is de code schaalbaar voor meerdere motoren.</p>
 
     <h2>Hardware</h2>
-    <p>Voor de hardware kant gebruiken wij een DRV8825 met een NEMA17.</p>
+    <p>Voor de hardware kant gebruiken wij een DRV8825 met een NEMA17. Voor het koppelen van deze twee en het aansturen van de driver vanuit de Arduino IDE is er veel <a href="https://lastminuteengineers.com/drv8825-stepper-motor-driver-arduino-tutorial/">documentatie beschikbaar.</a> 
+        De motor wordt via de teensy aangestuurd, maar heeft een aparte power source, een 12V adapter.  	
+    </p>
 
     <h2>Volgende stappen</h2>
-    <p>De volgende stap wordt om een bias oscillator circuit te maken, danwel met Teensy Audio, danwel 'from scratch',
-        danwel door deze te slopen uit een bestaand mechanisme.</p>
-
+    <p>De volgende stap wordt om een (zeer basaal) bias oscillator circuit te maken, dan wel met Teensy Audio, dan wel 'from scratch',
+        dan wel door deze te slopen uit een bestaand mechanisme.
+    
+        Verder willen wij wat meer aandacht besteden aan het functioneren van de Stepper motor, om deze wat preciezer op de potmeter te laten reageren (zie hieronder). 
+    
+        Daarna wordt het zaak om het motorcircuit te integreren met een bestaand tapemechanisme en het biassignaal bij het record signaal te voegen met een opamp mixer.</p>
+        
+    <h2>In actie: </h2>
     <div>
         <video width="320" controls>
             <source src="Stepper_met_pot.mp4" type="video/mp4">
