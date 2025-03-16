@@ -17,7 +17,7 @@
             | <a href="week2.html">Week 2 </a>
             | <a href="week3.html">Week 3 </a>
             | <a href="week4.html">Week 4 </a>
-            | <a href="week4.html">Week 5 </a>
+            | <a href="week5.html">Week 5 </a>
             |
         </p>
     </div>
@@ -26,18 +26,75 @@
 
         <h1>Week 5</h1>
 
-    <p>
+        <h2>Mechaniek</h2>
 
-    </p>
+        <p>
+            Voor het aandrijven van het mechanisme van het prototype hebben wij voor een derde optie gekozen: hardware
+            hacking.
+            Midas heeft een oude tapemechaniek uit een tape deck gesloopt. Deze hebben wij aan de L298N gekoppeld en zo
+            aangestuurd met de Teensy.
+            Het had best wat voeten in de aarde om onze bestaande hardware en code te koppelen aan een al ingebouwde
+            DC-motor, maar uiteindelijk hebben wij het aan de praat gekregen:
 
-    <h2></h2>
+        </p>
 
-    <p>
-  
-    </p>
-    
+        <div style="float:left">
+            <video width="100" controls>
+                <source src="Tape_hack_1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div style="float:left">
+            <video width="100" controls>
+                <source src="Tape_hack_2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <h2 style="clear: both">Amping</h2>
+
+        <p>
+            Verder hebben wij een versterker circuit met een opamp en in tweede instantie een transistor gemaakt. Dit
+            deden
+            wij om het signaal van de tape mechaniek te kunnen horen, maar later kunnen wij dit circuit gebruiken voor
+            de
+            record amp in het volledige circuit.
+        </p>
+
+        <h2> Bias </h2>
+
+        <p>
+            Het bias signaal hebben wij tot nu toe steeds met een audio shield gestuurd, totdat wij beseften dat alle
+            shields op een sample rate van 44.1 kHz sturen en dus nooit en hoog genoeg signaal zouden kunnen leveren.
+
+            Onze keuzes zijn nu om:
+        </p>
+        <ul>
+            <li> een bias signaal met PWM te sturen, en enige vervorming van de blokgolf bias voor lief te nemen. Dit
+                signaal maken wij dan analoog met een weerstand en een condensator en mixen wij in een opamp mixer.
+            <li> een analoog sinus bias signaal te bouwen en dit bij het tapesignaal te voegen met een opamp mixer.
+        </ul>
 
 
+        <h2>Functies prototype </h2>
+        <p>
+            Wij willen komende woensdag het volgende presenteren:
+        </p>
+        <ul>
+            <li> Een tape mechanisme dat met de Teensy bestuurd wordt en de tape loops heen en weer kan drijven.
+            <li> Een goed bias circuit gekozen te hebben.
+            <li> Een opamp mixer voor het mengen van de bias en het tape signaal.
+            <li> Een opamp + transistor versterker circuit om het signaal hoorbaar te krijgen.
+        </ul>
+        <p>
+            Voor ons eerste prototype hebben wij dus niet volledig aan onze MoSCoW voldaan. Wij wilden in eerste
+            instantie
+            ook een recording head werkend hebben, maar voor nu laten wij dit gaan om er zeker van te zijn dat wij de
+            rest
+            goed werkzaam hebben.
+        </p>
+    </div>
 </body>
 
 </html>
