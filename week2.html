@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 2</title>
+    <title>Week 1</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -12,71 +12,74 @@
 
     <div class="navbar">
         <p>
-            | <a href="index.html">HOME </a>
-            | <a href="week1.html">Week 1 </a>
+            | <a href="index.html">HOME / Week 1 </a>
             | <a href="week2.html">Week 2 </a>
             | <a href="week3.html">Week 3 </a>
             | <a href="week4.html">Week 4 </a>
             | <a href="week5.html">Week 5 </a>
-            | 
+            | <a href="week6.html">Week 6 </a>
+            | <a href="week7.html">Week 7 </a>
+            | <a href="tutorial.html">Tutorial </a>
+            |
         </p>
+    </div>                  
+
+    <h1>Week 2</h1>
+
+    <div>
+        <p>Ons plan is om een compacte tape looper te bouwen, met als idee om deze uiteindelijk vanuit een
+            microcontroller te kunnen besturen.
+            Hierbij gaan wij modulair werken, waarbij ons onderzoek bestaat uit het uitproberen van verschillende
+            circuitjes, om zo de beste onderdelen te kunnen kiezen
+            en onderweg bekend te raken met veel verschillende technieken.</p>
     </div>
 
 
     <div>
-        <h1>Week 2</h1>
-
-        <p>Wij hebben deze week gekeken naar het opzetten van een DC-motor circuit om een tape mechanisme aan te sturen,
-            om
-            dit te kunnen vergelijken met een stepper motor circuit.</p>
-
-        <p>Ons werd op het hart gedrukt dat deze laatste variant waarschijnlijk een betere keuze zou zijn, maar wij
-            hebben
-            hier nog geen onderdelen voor.
-            Daarom kiezen wij ervoor om de circuits voor beide motoren volledig uit te werken, dan doen wij ervaring op
-            met
-            beide én kunnen wij een betere vergelijking maken.</p>
-
-        <h2>Code </h2>
-
-        <p>De code voor de DC motor was simpel. Deze wordt aangestuurd met pulse width modulation.
-            Wij hebben hiervoor de <a href="https://github.com/khoih-prog/Teensy_PWM">Teensy_PWM library</a> gebruikt,
-            aangezien die zeer uitgebreid is en meer functies al ingebouwd heeft om preciezer PWM uit te kunnen sturen.
-        </p>
-
-        <p>Qua testfunctionaliteiten hebben wij: </p>
+        <h2>Functionaliteiten</h2>
+        <h3>Moet:</h3>
         <ul>
-            <li>De motor aan en uit kunnen zetten.</li>
-            <li>De motor op halve snelheid laten draaien, zodat wij dit later kunnen ombuigen naar een potmeter die de
-                snelheid aanpast.</li>
+            <li>Een functioneel circuit met een preamp en een recording head;</li>
+            <li>Een DC-motor die aangestuurd wordt met een microcontroller. In eerste instantie gebruiken wij hiervoor
+                een Teensy, later eventueel iets compacters en goedkopers;</li>
+            <li>Een eraser/bias circuit maken. Hiervoor willen wij een aantal prototypes breadboarden, om te zien of een
+                digitaal biassignaal, een schmitt trigger chip, of zelf een oscilator bouwen een beter resultaat geeft.
+            </li>
         </ul>
 
-        <p>De code is zo geschreven dat deze makkelijk schaalbaar is, dat wil zeggen zonder veel al te veel moeite
-            uitgebreid kan worden naar meerdere, afzonderlijk aan te sturen motoren.</p>
+        <h3>Zou moeten:</h3>
+        <ul>
+            <li>Een aparte play head toevoegen;</li>
+            <li>Kunnen toggelen van overdub/destructive recording, dwz het kunnen aansturen van de eraser head met een
+                microcontroller;</li>
+            <li>Tape in twee richtingen kunnen afspelen met 2 pinch rollers, idealiter met één pot bestuurd van
+                bijvoorbeeld 2x - -2x.</li>
+        </ul>
 
-        <h2>Hardware </h2>
-        <p>Voor het aansturen van de hardware zijn wij gaan samenzitten om de krachten te bundelen.
-            Wij gebruiken een L298N driver, een gebruikelijke keuze. Daarmee is er veel <a href="https://lastminuteengineers.com/l298n-dc-stepper-driver-arduino-tutorial/"> documentatie beschikbaar </a> en was
-            het
-            koppelen goed te doen.</p>
+        <h3>Zou kunnen:</h3>
+        <ul>
+            <li>Circuit kritisch bekijken voor betere ruisonderdrukking;</li>
+            <li>Het toevoegen van een ADC om gelijk geluiden naar een SD-kaart te kunnen opnemen.</li>
+        </ul>
 
-        <p>Wij hebben nog een paar kleine aanpassingen gemaakt aan de code zodat deze beter aansluit bij onze doelen,
-            waarbij wij ook gelijk de potmeter hebben aangesloten en code hebben geschreven om de motor variabel heen en
-            weer te kunnen draaien.</p>
-
-        <p>Deze code willen wij in de toekomst nog testen met een betere DC-motor om eerlijk te kunnen vergelijken met
-            een
-            Stepper motor.</p>
-
-        <h2>In actie: </h2>
-
+        <h3>Toekomstmuziek:</h3>
+        <ul>
+            <li>Kritisch kijken naar een effectiever circuit en naar component keuze om een extra portable en compact
+                product te kunnen leveren.</li>
+        </ul>
     </div>
 
     <div>
-        <video width="320" controls>
-            <source src="DC_met_pot.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <h2>Bronnen</h2>
+        <ul>
+            <li><a href="https://www.instructables.com/member/Ramatronics_Laboratory/">Ramatronics Laboratory</a></li>
+            <li><a href="https://www.youtube.com/@igorbrichkov3632"> kanaal van Igor Brichkov</a></li>
+            <li><a href="https://www.youtube.com/watch?v=OMjx6y3mABY">Simpel Tape Playback Circuit</a></li>
+            <li><a href="https://www.youtube.com/watch?v=mDLw054vONI">Tape mechanisme met Arduino</a></li>
+            <li><a href="https://helpful.knobs-dials.com/index.php/Cassette_tape_speed_control">Cassette Tape Speed
+                    Control</a></li>
+        </ul>
+
     </div>
 
 </body>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<pre>
+#include <Bounce2.h>
+
+
+//Communication with L298N
+#define ENA 24
+#define IN1 25
+#define IN2 26
+
+//Tape speed controls
+#define BUTTON1_PIN 32  //On-off
+#define BUTTON2_PIN 33  //Halve speed
+#define SPEED_POT 41    //Speed dial
+
+//Library for button usage because I'm an idiot and mess it up otherwise
+Bounce2::Button button1 = Bounce2::Button();
+Bounce2::Button button2 = Bounce2::Button();
+
+//initialize the parameters that will be used to control tape speed
+int duty_cycle = 255;
+int tape_speed;
+bool motor1_on = false;
+bool halve_speed = false;
+
+
+void setup() {
+  Serial.begin(115200);
+
+  //To send to L298N
+  pinMode(ENA, OUTPUT);
+  pinMode(IN1, OUTPUT);
+  pinMode(IN2, OUTPUT);
+
+  //To recieve from breadboard
+  pinMode(BUTTON1_PIN, INPUT_PULLUP);
+  pinMode(BUTTON2_PIN, INPUT_PULLUP);
+  pinMode(SPEED_POT, INPUT);
+
+  //To setup bounce library
+  button1.attach(BUTTON1_PIN);
+  button1.interval(5);
+  button2.attach(BUTTON2_PIN);
+  button2.interval(5);
+
+  //Init state: motor is off
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, LOW);
+}
+
+void loop() {
+  //Bounce library
+  button1.update();
+  button2.update();
+
+  //Map input from potmeter to usable valuesd
+  tape_speed = map(analogRead(SPEED_POT), 0, 1026, 0, 256);
+
+
+  //Mapping potmeter input so that the first half of values controls reverse tape speed from full to 0 and second half of values control forward tape speed drom 0 to full.
+  if (tape_speed >= 128) {
+    tape_speed = ((tape_speed - 128) * 2);
+    digitalWrite(IN1, LOW);
+    digitalWrite(IN2, HIGH);
+    Serial.println("richting 2");
+  }
+
+  else {
+    tape_speed = map((tape_speed * 2), 0, 256, 256, 0);
+    digitalWrite(IN1, HIGH);
+    digitalWrite(IN2, LOW);
+    Serial.println("richting 1");
+  }
+
+  //Mapping button1 to turn on motor 
+  if (button1.released()) {
+    motor1_on = !motor1_on;
+    Serial.println("button_1");
+    // Serial.println(motor1_on);
+  }
+ //Mapping button1 to trigger half speed
+  if (button2.released()) {
+    halve_speed = !halve_speed;
+    Serial.println("button_2");
+    // Serial.println(halve_speed);
+  }
+
+
+  //Trigger updateMotor1
+  updateMotor1();
+}
+
+
+
+void updateMotor1() {
+
+  //if motor1_on button is pressed (== true), make duty cycle the tape_speed. If halve_speed button is pressed (== true), the tape_speed is first halved.
+  if (motor1_on) {
+    if (halve_speed) {
+      duty_cycle = (tape_speed / 2);
+    }
+
+    if (halve_speed == false) {
+      duty_cycle = tape_speed;
+    }
+  }
+
+
+  //motor off: duty_cycle is 0.
+  else {
+    duty_cycle = 0;
+  }
+
+  //write to L298N
+  analogWrite(ENA, duty_cycle);
+  Serial.println(duty_cycle);
+}
+</pre>
+
+</body>
+
+</html>
